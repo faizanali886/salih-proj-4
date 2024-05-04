@@ -1,0 +1,16 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 14 # Use Node.js 14
+    commands:
+      - npm install -g npm@latest # Update npm
+      - npm install -g yarn # Install Yarn package manager
+  build:
+    commands:
+      - yarn install # Install dependencies
+      - yarn build # Build the React app
+artifacts:
+  files:
+    - '**/*'
